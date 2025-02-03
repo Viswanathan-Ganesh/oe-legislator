@@ -50,7 +50,7 @@ elif st.session_state["verified"] == False and st.session_state["gotOtp"] == Tru
     user_otp = st.text_input("Enter OTP: ")
     verify = st.button("Verify")
     if verify:
-        st.write(str(st.session_state["otp"]))
+        st.write("OTP Verified!")
         print(st.session_state["otp"] == eval(user_otp))
         if (st.session_state["otp"] == eval(user_otp)):
             st.session_state["verified"] = True
