@@ -36,7 +36,7 @@ if "otp" not in st.session_state:
     st.session_state["otp"] = 0
 
 if st.session_state["verified"] == False and st.session_state["gotOtp"] == False:
-    smail = st.text_input("Enter Smail: ", )
+    smail = st.text_input("Enter Smail: (Please press enter or return after writing)")
     submit = st.button("Get OTP")
     if submit:
         flag = smail_verification(smail)
@@ -47,7 +47,7 @@ if st.session_state["verified"] == False and st.session_state["gotOtp"] == False
             st.session_state["gotOtp"] = True
         #st.session_state["verified"] = True
 elif st.session_state["verified"] == False and st.session_state["gotOtp"] == True:
-    user_otp = st.text_input("Enter OTP: ")
+    user_otp = st.text_input("Enter OTP: (Please press enter or return after writing)")
     verify = st.button("Verify")
     if verify:
         st.write("OTP Verified!")
